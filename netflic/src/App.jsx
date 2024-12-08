@@ -8,6 +8,7 @@ import styled from "styled-components"
 import { useState } from "react"
 
 
+
 const Container=styled.div`
 width: 100vw;
 height: 100vh;
@@ -20,6 +21,7 @@ const [activeProfile, setActiveProfile] = useState("");  //Burada amaç parent o
     <Container>
   <BrowserRouter>
  <Header activeProfile={activeProfile}/>
+ 
  <Switch>
  <Route exact path="/" > 
     <Redirect to="/login"/>

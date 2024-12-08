@@ -22,6 +22,8 @@ font-size: 3rem;
 const ManageProfiles=styled(Link)`
 border:1px solid gray;
 padding:0.6rem 0.8rem;
+margin:0;
+padding: 0%;
 text-decoration: none;
 color: gray;
 margin-top: 1rem;

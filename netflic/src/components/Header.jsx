@@ -1,9 +1,8 @@
 import {Link} from "react-router-dom"
 import styled from "styled-components";
-const Header = (props) => {
 
 
-  const Container =styled.header`
+const Container =styled.header`
   position: absolute; //buraya sabitledik
   top:0;
   right: 0;
@@ -12,7 +11,6 @@ const Header = (props) => {
   padding: .5rem;
   justify-content: flex-end;
   color:lightgray;
-  width: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,13 +29,15 @@ const Header = (props) => {
   `;
 
   const UserPanel=styled.div`
-  margin-left: 1rem;
+  margin:0 1rem;
   `;
 
   const User=styled.img`
   height:60px;
-  border-radius: 0% .2rem;
+  border-radius: 0.2rem;
   `;
+const Header = (props) => {
+
 
   const {activeProfile}=props
   return (
