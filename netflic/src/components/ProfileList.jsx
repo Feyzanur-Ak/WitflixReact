@@ -14,7 +14,7 @@ const ProfileList = () => {
     <Container>
       {profileData.map((item)=>(
 
-<Profile key={item.id}  profile={item}/>
+        <Profile key={item.id}  profile={item}/>
 
       ))}
     </Container>

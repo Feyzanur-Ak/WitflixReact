@@ -15,6 +15,8 @@ gap:1rem;
 const Title=styled.h1`
 text-align:center;
 color:lightgray;
+font-weight: bold;
+font-size: 3rem;
 `;
 
 const ManageProfiles=styled.button`
@@ -22,14 +24,21 @@ border:1px solid gray;
 padding:1rem 2rem;
 color: gray;
 margin-top: 1rem;
+font-size: 1rem;
+cursor: pointer;
+
+&:hover{
+  background-color: gray;
+  color: white;
+}
 `;
 
 const Welcome = () => {
   return (
     <Container>
-      <Title>Who&apos; s Watching?</Title>
+      <Title>Kim izliyor?</Title>
     <ProfileList/>
-    <ManageProfiles to="/manage/profiles">Manage Profiles</ManageProfiles>
+    <ManageProfiles to="/manage/profiles">Profil Yönetimi</ManageProfiles>
     </Container>
   )
 }
