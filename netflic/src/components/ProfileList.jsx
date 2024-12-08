@@ -1,15 +1,23 @@
-import {profileData} from "./ProfileData.js"
-import Profile from "./Profile.jsx"
+import {profileData} from "./ProfileData.js";
+import Profile from "./Profile.jsx";
+import styled from "styled-components";
+
+
+const Container = styled.div`
+display:flex ;
+gap:1rem;
+`;
+
 const ProfileList = () => {
    
   return (
-    <div>
-      {profileData.map((profile)=>{
+    <Container>
+      {profileData.map((item)=>(
 
-<Profile key={profile.id}  profile={profile}/>
+<Profile key={item.id}  profile={item}/>
 
-      })}
-    </div>
+      ))}
+    </Container>
   )
 }
 

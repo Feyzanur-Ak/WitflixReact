@@ -620,3 +620,4 @@ export const movies = [
     title: "Rick and Morty",
     contentType: "show",
   },
+];

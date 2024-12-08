@@ -4,10 +4,18 @@ import Welcome from "./pages/Welcome"
 import Login from "./pages/Login"
 import Hero from "./pages/Hero"
 import Header from "./components/Header"
+import styled from "styled-components"
+
+const Container=styled.div`
+width: 100vw;
+height: 100vh;
+background-color: #1c1c1c;
+`;
 function App() {
 
 
   return (
+    <Container>
   <BrowserRouter>
  <Header/>
  <Switch>
@@ -26,6 +34,7 @@ function App() {
 </Route>
  </Switch>
  </BrowserRouter>
+ </Container>
   )
 }
 
