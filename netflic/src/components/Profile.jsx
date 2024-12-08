@@ -1,36 +1,47 @@
 
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Card=styled.div`
-padding:2rem;
+padding:0.4rem;
+width: 180px;
+
 `;
 
 const Avatar=styled.img`
 width:100%;
-border-radius:1rem;
+border-radius:0.5rem;
+box-sizing: border-box;
 cursor: pointer;
+
+&:hover{
+    border:4px solid lightgray;
+    border-radius: 0.5rem;
+}
 `;
 
 const Title=styled.h2`
 text-align:center;
 color:lightgray;
+font-weight: normal;
 `;
 
 const Profile = (props) => {
 
-    const handleAvatarClick = () => {
-        <Link to="/hero"></Link>
+    const history = useHistory();
+
+    const clickHandler = () => {
+        setActiveProfile(profile);
+        history.push("/hero");
       };
     
-    // eslint-disable-next-line react/prop-types
-    const {profile}=props
-    // eslint-disable-next-line react/prop-types
-    const {avatar,title}=profile;
+    
+    const {profile,setActiveProfile}=props
+
+    const {avatar,title,}=profile;
   return (
-    <Card>
-     
-            <Avatar src={avatar} onClick={handleAvatarClick}/>
+    <Card onClick={clickHandler}>
+           <Avatar src={avatar} />
         <Title>{title}</Title>
 
     </Card>

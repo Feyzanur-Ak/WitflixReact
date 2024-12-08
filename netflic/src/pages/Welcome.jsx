@@ -1,8 +1,8 @@
 import ProfileList from "../components/ProfileList"
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Container=styled.section`
-
 display: flex;
 flex-direction: column;
 width: 100vw;
@@ -19,9 +19,10 @@ font-weight: bold;
 font-size: 3rem;
 `;
 
-const ManageProfiles=styled.button`
+const ManageProfiles=styled(Link)`
 border:1px solid gray;
-padding:1rem 2rem;
+padding:0.6rem 0.8rem;
+text-decoration: none;
 color: gray;
 margin-top: 1rem;
 font-size: 1rem;
@@ -33,11 +34,13 @@ cursor: pointer;
 }
 `;
 
-const Welcome = () => {
+const Welcome = (props) => {
+
+  const {setActiveProfile}=props;
   return (
     <Container>
       <Title>Kim izliyor?</Title>
-    <ProfileList/>
+    <ProfileList setActiveProfile={setActiveProfile}/>
     <ManageProfiles to="/manage/profiles">Profil Yönetimi</ManageProfiles>
     </Container>
   )

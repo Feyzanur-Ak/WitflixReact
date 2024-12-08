@@ -5,6 +5,8 @@ import Login from "./pages/Login"
 import Hero from "./pages/Hero"
 import Header from "./components/Header"
 import styled from "styled-components"
+import { useState } from "react"
+
 
 const Container=styled.div`
 width: 100vw;
@@ -12,12 +14,12 @@ height: 100vh;
 background-color: #1c1c1c;
 `;
 function App() {
-
+const [activeProfile, setActiveProfile] = useState("");  //Burada amaç parent olarak kullandığımız Appden aktif profili göstermek için bir state tanımladık ve her sayfada bulunacak olan Headera activeProfile props olarak gönderilir.
 
   return (
     <Container>
   <BrowserRouter>
- <Header/>
+ <Header activeProfile={activeProfile}/>
  <Switch>
  <Route exact path="/" > 
     <Redirect to="/login"/>
@@ -27,7 +29,7 @@ function App() {
     </Route>
 <Route path="/welcome" > 
 
-<Welcome/> </Route>
+<Welcome setActiveProfile={setActiveProfile}/> </Route>
 
 <Route path="/hero" > 
 <Hero/>

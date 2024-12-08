@@ -1,12 +1,18 @@
 
+import styled from "styled-components";
 
+const Title=styled.h1`
+color:white
+`;
+
+const Header=styled.div`
+width: 10%;
+background-color: #1c1c1c`;  
 const Hero = () => {
   return (
-    <div>
-      <div className="hero">
-        <h1></h1>
-        </div>
-    </div>
+      <Header className="hero">
+        <Title>Merhaba</Title>
+        </Header>
   )
 }
 
